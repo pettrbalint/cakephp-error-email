@@ -1,7 +1,8 @@
 An error has been thrown<?php if ($site): ?> on <?= $site ?><?php endif; ?><?php if ($environment): ?> (<?= $environment ?>)<?php endif; ?>
 
 <?php if ($environment): ?>Environment: <?= $environment ?><?php endif; ?>
-Error Url: <?= $this->Url->build($this->request->getAttribute('here'), true) ?>
+Error Url: <?= $this->Url->build($this->request->getAttribute('here'), ['fullBase' =>true]) ?>
+HTTP Method: <?= $this->request->getMethod() ?>
 Error Class: <?= get_class($error) ?>
 Error Message: <?= $error->getMessage() ?>
 Error Code: <?= $error->getCode() ?>

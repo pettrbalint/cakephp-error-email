@@ -8,7 +8,11 @@
     <?php endif; ?>
     <tr>
         <td><strong>Error Url:</strong></td>
-        <td><?= $this->Url->build($this->request->getAttribute('here'), true) ?></td>
+        <td><?= $this->Url->build($this->request->getAttribute('here'), ['fullBase' => true]) ?></td>
+    </tr>
+    <tr>
+        <td><strong>HTTP Method:</strong></td>
+        <td><?= $this->request->getMethod() ?></td>
     </tr>
     <tr>
         <td><strong>Error Class:</strong></td>

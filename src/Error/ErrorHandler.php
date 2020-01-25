@@ -1,4 +1,5 @@
 <?php
+
 namespace ErrorEmail\Error;
 
 use Cake\Error\ErrorHandler as CakeErrorHandler;
@@ -34,7 +35,7 @@ class ErrorHandler extends CakeErrorHandler
      * @param array|null $context Context
      * @return bool True if error was handled
      */
-    public function handleError($code, $description, $file = null, $line = null, $context = null)
+    public function handleError(int $code, string $description, ?string $file = null, ?int $line = null, ?array $context = null): bool
     {
         if (error_reporting() === 0) {
             return false;
@@ -69,12 +70,12 @@ class ErrorHandler extends CakeErrorHandler
      * Uses a template method provided by subclasses to display errors in an
      * environment appropriate way.
      *
-     * @param \Exception $exception Exception instance.
+     * @param \Throwable $exception Exception instance.
      * @return void
      * @throws \Exception When renderer class not found
      * @see http://php.net/manual/en/function.set-exception-handler.php
      */
-    public function handleException(Exception $exception)
+    public function handleException(\Throwable $exception): void
     {
         // Add emailing throwable functionality
         $this->emailThrowable($this->_unwrapException($exception));
@@ -88,7 +89,7 @@ class ErrorHandler extends CakeErrorHandler
      * @param \Exception $exception Exception instance.
      * @return \Throwable (php5 Exception) A throwable or child class
      */
-    protected function _unwrapException(Exception $exception)
+    protected function _unwrapException(\Exception $exception)
     {
         // PHP7ErrorException must be unwrapped to get the actual \Error class
         if ($exception instanceof PHP7ErrorException) {

@@ -1,4 +1,5 @@
 <?php
+
 namespace ErrorEmail\Traits;
 
 use Cake\Cache\Cache;
