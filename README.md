@@ -1,4 +1,4 @@
-# ErrorEmail plugin for CakePHP 3.x
+# ErrorEmail plugin for CakePHP 4.x
 [![Build Status](https://travis-ci.org/ebrigham1/cakephp-error-email.svg?branch=master)](https://travis-ci.org/ebrigham1/cakephp-error-email)
 [![codecov](https://codecov.io/gh/ebrigham1/cakephp-error-email/branch/master/graph/badge.svg)](https://codecov.io/gh/ebrigham1/cakephp-error-email)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
