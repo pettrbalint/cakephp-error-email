@@ -12,8 +12,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/ebrigham1/cakephp-error-email/issues",
-        "source": "https://github.com/ebrigham1/cakephp-error-email/"
+        "issues": "https://github.com/pettrbalint/cakephp-error-email/issues",
+        "source": "https://github.com/pettrbalint/cakephp-error-email/"
     },
     "require": {
         "php": ">=7.2",

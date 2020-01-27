@@ -5,6 +5,7 @@
 
 The ErrorEmail plugin is designed to enhance CakePHP's error handling system by adding the ability to conditionally email the dev team when errors or exceptions are thrown by your application with useful debugging information such as:
 * Exception/Error Url
+* Exception/Error HTTP Methods
 * Exception/Error Class
 * Exception/Error Message
 * Exception/Error Code
@@ -33,7 +34,7 @@ You can install this plugin into your CakePHP application using [composer](http:
 
 Run the following command
 ```sh
-composer require ebrigham1/cakephp-error-email
+composer require pettrbalint/cakephp-error-email
  ```
 You can then load the plugin using the shell command:
 ```sh

@@ -77,6 +77,10 @@ class ErrorHandler extends CakeErrorHandler
      */
     public function handleException(\Throwable $exception): void
     {
+        // reformat typeerror to plain exception because of the subsequent calls
+        if (is_a($exception, 'TypeError')) {
+            $exception = new Exception($exception->getMessage(), $exception->getCode());
+        }
         // Add emailing throwable functionality
         $this->emailThrowable($this->_unwrapException($exception));
         // Use parent functionality
